@@ -9,3 +9,10 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', ['nama' => 'Rifki Ramadhani']);
 });
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
