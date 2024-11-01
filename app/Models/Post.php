@@ -8,14 +8,14 @@ class Post {
               'id' => '1',
               'slug' => 'judul-artikel-1',
               'title' => 'Judul Artikel 1',
-              'author' => 'Muhamad Marsa Nur Jaman',
+              'author' => 'Muhammad Rifki Ramadhani',
               'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis fugit corrupti, quaerat non perspiciatis id est sequi debitis ipsam assumenda aspernatur praesentium vel, reprehenderit nulla doloribus accusamus inventore distinctio.'
           ],
           [
               'id' => '2',
               'slug' => 'judul-artikel-2',
               'title' => 'Judul Artikel 2',
-              'author' => 'Lyramor',
+              'author' => 'Rmdhniki',
               'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis fugit corrupti, quaerat non perspiciatis id est sequi debitis ipsam assumenda aspernatur praesentium vel, reprehenderit nulla doloribus accusamus inventore distinctio.'
           ]
       ];
