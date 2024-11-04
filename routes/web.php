@@ -21,7 +21,6 @@ Route::get('/contact', function () {
 });
 
 Route::get('/posts/{slug}', function ($slug) {
-    $post = Post::find($slug);
-
+    $post = Post::where('slug', $slug)->firstOrFail();
     return view('post', ['title' => 'Single Post', 'post' => $post]);
 });
