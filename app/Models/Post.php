@@ -13,7 +13,7 @@ class Post extends Model
     protected $fillable = ['title', 'author_id',
     'slug', 'body'];
     protected $with = ['author', 'category'];
-    
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id'); //'author_id' hilangkan
