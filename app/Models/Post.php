@@ -10,7 +10,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'author_id', 'slug', 'body'];
+    protected $fillable = ['title', 'author_id',
+    'slug', 'body'];
+    protected $with = ['author', 'category'];
+    
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id'); //'author_id' hilangkan
