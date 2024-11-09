@@ -10,14 +10,15 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about',['name' => 'Muhamad Marsa Nur Jaman', 'title' => 'About'] );
+    return view('about',['name' => 'Muhammad Rifki Ramadhani', 'title' => 'About'] );
 });
 
 Route::get('/posts', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
-    return view('posts',  ['title' => 'Blog', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get()]);
+    return view('posts', [
+        'tittle' => 'Blog',
+        'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)->withQueryString()]);
 });
+
 
 Route::get('/posts/{post:slug}', function (Post $post){
     return view('post', ['title' => 'Single Post', 'post' => $post]);
